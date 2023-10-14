@@ -26,7 +26,9 @@ let l= new Linklist()
 l.prepand(90)
 l.prepand("sami")
 l.prepand("python")
-l.prepand("sjavi")
-l.prepand("C#")
 l.prepand("C+=")
+l.append(10000)
+l.append("last_item")
+l.append("programer")
 console.log(l.total_node);
+console.log(l.traverse());
