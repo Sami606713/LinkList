@@ -20,6 +20,32 @@ class Linklist{
     // increment length
     this.total_node+=1
     }
+    append(value){
+        const new_node=new Node(value)
+        if (this.head==null) {
+            this.head=new_node
+            this.total_node+=1
+            // return -> optonal if you use else 
+        }
+        else{
+            let curr_node=this.head
+            while (curr_node.next!=null) {
+                curr_node=curr_node.next
+            }
+            curr_node.next=new_node
+            this.total_node+=1
+        }
+
+    }
+    traverse(){
+        let curr_node=this.head
+        let result=[]
+        while (curr_node!=null) {
+            result.push(curr_node.value)
+            curr_node=curr_node.next
+        }
+        return result
+    }
 }
 // Make a object
 let l= new Linklist()
