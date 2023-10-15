@@ -37,6 +37,27 @@ class Linklist{
         }
 
     }
+    insert(index,value){
+        const new_node=new Node(value)
+        if (index==0) {
+            this.prepand(value)
+        
+        }
+        else {
+            let counter =1
+            let curr_node=this.head
+            while (curr_node.next!=null) {
+                if (index==counter) {
+                    // curr_node.next=new_node
+                    new_node.next=curr_node.next
+                    curr_node.next=new_node
+                    this.total_node+=1
+                }
+                counter+=1
+                curr_node=curr_node.next
+            }
+        }
+    }
     traverse(){
         let curr_node=this.head
         let result=[]
@@ -53,8 +74,9 @@ l.prepand(90)
 l.prepand("sami")
 l.prepand("python")
 l.prepand("C+=")
-l.append(10000)
+// l.append(10000)
 l.append("last_item")
 l.append("programer")
+l.insert(5,1000)
 console.log(l.total_node);
 console.log(l.traverse());
