@@ -58,6 +58,23 @@ class Linklist{
             }
         }
     }
+    // Delete Head 
+    delete_head(){
+        if(this.head==null){
+            console.log("The Linked List is already empty.\nNo action is performed.");
+        }
+        else{
+            this.head=this.head.next
+            this.total_node-=1
+        }
+       
+    }
+    
+    // Clear function
+    clear(){
+        this.head=null 
+        this.total_node=0
+    }
     traverse(){
         let curr_node=this.head
         let result=[]
@@ -78,5 +95,11 @@ l.prepand("C+=")
 l.append("last_item")
 l.append("programer")
 l.insert(5,1000)
-console.log(l.total_node);
+// console.log(l.total_node);
+// l.delete_head()
+// l.delete_head()
+// l.delete_head()
+// l.delete_head()
+// l.clear()
+// l.clear()
 console.log(l.traverse());
