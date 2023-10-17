@@ -67,7 +67,6 @@ class Linklist{
             this.head=this.head.next
             this.total_node-=1
         }
-       
     }
     
     // Clear function
