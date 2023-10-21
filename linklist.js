@@ -71,10 +71,9 @@ class Linklist{
     
     // Clear function
     clear(){
-        // this.head=null 
-        // this.total_node=0
         this.head=null 
         this.total_node=0
+    
     }
     traverse(){
         let curr_node=this.head
