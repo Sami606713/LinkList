@@ -68,6 +68,49 @@ class Linklist{
             this.total_node-=1
         }
     }
+
+    // Pop Function
+    pop(){
+        if(this.head==null){
+            console.log("Linklist is already empty");
+        }
+        else if(this.head.next==null){
+            this.delete_head()
+        }
+        else{
+            let curr_node=this.head
+            while(curr_node.next.next!=null){
+                curr_node=curr_node.next
+            }
+            curr_node.next=curr_node.next.next
+            this.total_node-=1
+        }
+    }
+
+    // Remove Function
+    remove(index){
+        if(index==0){
+            this.delete_head()
+        }
+        else if(index==this.total_node-1){
+            this.pop()
+        }
+        else if (index>=this.total_node){
+            console.log("Index out of range")
+        }
+        else{
+            let counter=1
+            let curr_node=this.head
+            while(curr_node.next!=null){
+                if(counter==index){
+                    curr_node.next=curr_node.next.next
+                    this.total_node-=1
+                }
+                counter+=1
+                curr_node=curr_node.next
+            }
+        }
+    }
     
     // Clear function
     clear(){
@@ -91,15 +134,13 @@ l.prepand(90)
 l.prepand("sami")
 l.prepand("python")
 l.prepand("C+=")
-// l.append(10000)
-l.append("last_item")
-l.append("programer")
-l.insert(5,1000)
-// console.log(l.total_node);
-// l.delete_head()
-// l.delete_head()
-// l.delete_head()
-// l.delete_head()
-// l.clear()
-// l.clear()
+l.append(10000)
+// l.append("last_item")
+// l.append("programer")
+// l.insert(5,1000)
+// l.pop()
+// l.pop()
+// l.pop()
+// l.pop()
+l.remove(7)
 console.log(l.traverse());
