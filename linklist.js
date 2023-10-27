@@ -111,7 +111,6 @@ class Linklist{
             }
         }
     }
-    
     // Clear function
     clear(){
         this.head=null 
@@ -142,5 +141,6 @@ l.append(10000)
 // l.pop()
 // l.pop()
 // l.pop()
-l.remove(7)
+// l.remove(7)
+
 console.log(l.traverse());
