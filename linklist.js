@@ -111,6 +111,40 @@ class Linklist{
             }
         }
     }
+    // Search
+    search_by_index(index){
+        let curr_node=this.head
+        let counter=0
+        while (curr_node!=null) {
+            if(counter==index){
+                console.log(curr_node.value);
+                return
+            }
+            counter+=1
+            curr_node=curr_node.next
+        }
+        if(curr_node==null){
+            console.log("Index not found");
+        }
+    }
+
+    // Search by value
+    search_by_value(value){
+        let counter=0
+        let curr_node=this.head
+        while (curr_node!=null) {
+            if(curr_node.value==value)
+            {
+                console.log("index is: ",counter)
+                return
+            }
+            counter+=1
+            curr_node=curr_node.next
+        }
+        if (curr_node==null) {
+            console.log("Value not found")
+        }
+    }
     // Clear function
     clear(){
         this.head=null 
@@ -134,13 +168,6 @@ l.prepand("sami")
 l.prepand("python")
 l.prepand("C+=")
 l.append(10000)
-// l.append("last_item")
-// l.append("programer")
-// l.insert(5,1000)
-// l.pop()
-// l.pop()
-// l.pop()
-// l.pop()
-// l.remove(7)
-
 console.log(l.traverse());
+l.search_by_index(2)
+l.search_by_value("python")
