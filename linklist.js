@@ -163,11 +163,8 @@ class Linklist{
 }
 // Make a object
 let l= new Linklist()
-l.prepand(90)
-l.prepand("sami")
-l.prepand("python")
+l.prepand(1)
+l.prepand(2)
+l.prepand(3)
 l.prepand("C+=")
-l.append(10000)
-console.log(l.traverse());
-l.search_by_index(2)
-l.search_by_value("python")
+console.log(l.traverse())
